@@ -1,6 +1,6 @@
 body
 {
-    background-image: url("../img/background2.png");
+    background-image: url("../img/background3.png");
     width: 1000px;
     height: auto;
     margin-left: auto;
@@ -16,9 +16,9 @@ body
     width: 100%;
     flex-wrap: nowrap;
     text-align: center;
-    background-image: url("../img/container_background.png");
-    border-radius: 20px;
-    box-shadow: 50px 0px 50px #000;
+    /*background-image: url("../img/container_background.png");*/
+   
+    
 }
 
 .header
@@ -28,30 +28,29 @@ body
     flex-grow: 1;
     box-shadow: 50px 0px 50px #000;
     border-radius: 20px;
-    background-image: url("../img/container_background.png");
 }
 
 .header > img
 {
-    border: 4px solid #fff;
+    border: 4px solid #9d8525b0;
     border-radius: 20px;
 }
 
 
 .first_page
 {
-    color: goldenrod;
-    font-size: 48px;
+    color: #000;
+    font-size: 26px;
     flex-basis: 100%;
     flex-grow: 1;
-    border: 4px solid #fff;
     border-radius: 20px;
     margin: 10px;
+    letter-spacing: 3px;
 }
 
 .first_page > ul 
 {
-    text-align: center;
+    text-align: left;
     font-size: 32px;
     letter-spacing: 2px;
     margin-left: 25px;
@@ -63,7 +62,6 @@ body
     display:flex;
     flex-basis: 100%;
     flex-grow: 1;
-    border: 4px solid #fff;
     border-radius: 20px;
     margin: 10px;
     padding: 10px;
@@ -104,7 +102,7 @@ body
 .text-overlay 
 {
     position: absolute;
-    top: 50%;
+    top: 75%;
     left: 25%;
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
@@ -146,14 +144,12 @@ a:link,a:active,a:visited
     flex-basis: 100%;
     text-align: center;
     flex-grow: 1;
-    box-shadow: 50px 0px 50px #000;
-    background-image: url("../img/container_background.png");
     border-radius: 20px;
 }
 
 .footer > img
 {
-    border: 4px solid #fff;
+    border: 4px solid #9d8525b0;
     border-radius: 20px;
 }
 
@@ -165,3 +161,93 @@ a:link,a:active,a:visited
     font-style: italic;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+.subsite
+{
+    color: #000;
+    font-size: 24px;
+    flex-basis: 100%;
+    flex-grow: 1;
+    border-radius: 20px;
+    margin: 10px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.subsite > h1, .subsite > footer
+{
+    color: #fff;
+}
+
+.subsite > h3
+{
+    color: #fff;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.subsite > h1
+{
+    text-decoration: underline;
+}
+
+.subsite > ul 
+{
+    text-align: left;
+    list-style-type: square;
+    margin-left: 10px;
+    list-style-image: url("../img/check_done.png");
+}
+
+.slider > img
+{
+    border-radius: 20px;
+    border: 4px solid #9d8525b0;
+}
+
+button
+{
+    flex-basis: 100%;
+    flex-grow: 1;
+    margin: 10px;
+    width: 25%;
+    text-align: center;
+    transition: all .2s ease-in-out;
+
+    position: relative;
+    background-color: #fff; /* Kolor początkowy */
+    color: #000; /* Kolor tekstu */
+    border: none; /* Brak obramowania */
+    padding: 10px 20px; /* Wewnętrzne odstępy */
+    font-size: 24px; /* Rozmiar czcionki */
+    cursor: pointer; /* Kursor wskazujący przycisk */
+    border-radius: 20px; /* Zaokrąglone rogi */
+    overflow: hidden; /* Ukrywa nadmiar z pseudo-elementu */
+    z-index: 1;
+}
+
+button::after 
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ebcf5f; /* Kolor, który ma się pojawić */
+  transform: scaleX(0); /* Na początku pseudo-element ma 0 szerokości */
+  transform-origin: bottom right; /* Pseudo-element pojawia się od prawego dolnego rogu */
+  transition: transform 0.7s ease; /* Płynna animacja */
+  z-index: -1; /* Umieszczamy pseudo-element za tekstem */
+}
+
+button:hover::after 
+{
+  transform: scaleX(1); /* Po najechaniu pseudo-element wypełnia przycisk */
+}
+
+h3,h4
+{
+    color: aliceblue;
+}
+
