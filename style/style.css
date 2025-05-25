@@ -141,6 +141,7 @@ a:link,a:active,a:visited
 
 .footer
 {
+    color: #fff;
     flex-basis: 100%;
     text-align: center;
     flex-grow: 1;

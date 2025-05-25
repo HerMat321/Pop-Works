@@ -1,7 +1,7 @@
 function slider()
 {
     const image = document.querySelector(".slider img"); // Pobieramy obrazek
-    const totalImages = 3; // Liczba obrazów w folderze
+    const totalImages = 7; // Liczba obrazów w folderze
     let i = 1; // Zaczynamy od pierwszego obrazka
 
     //Zmienianie obrazków w divie
@@ -11,7 +11,7 @@ function slider()
         {
             i = 1;
         } 
-        image.src = `../img/mowt_the_lawn_slider/${i}.png`;
+        image.src = `../img/mow_the_lawn_slider/${i}.png`;
     }, 2500); 
 }
 
